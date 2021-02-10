@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.scss";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
-import { PostData } from "../model/model";
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.scss';
+import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link';
+import Date from '../components/date';
+import { PostData } from '../model/model';
 
 type Props = {
   allPostsData: PostData[];
@@ -28,7 +28,7 @@ export default function Home(props: Props) {
       <section className={utilStyles.headingMd}>
         <p>Ciao sono Eric, ingegnere informatico. Ma ho anche dei pregi.</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
+          (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
