@@ -1,12 +1,12 @@
 export type PostData = {
   id: string;
   title: string;
-  date: Date;
+  date: string;
 };
 
 export type PostDataWContent = {
   id: string;
   title: string;
-  date: Date;
+  date: string;
   content: string;
 };

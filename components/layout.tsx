@@ -1,25 +1,22 @@
-import Head from "next/head";
-import styles from "./layout.module.scss";
-import utilStyles from "../styles/utils.module.scss";
-import Link from "next/link";
-import { ReactChild, ReactChildren } from "react";
+import Head from 'next/head';
+import styles from './layout.module.scss';
+import utilStyles from '../styles/utils.module.scss';
+import Link from 'next/link';
+import { ReactChild } from 'react';
 
 type Props = {
   children: ReactChild[];
   home?: boolean;
 };
-const name = "Your Name";
-export const siteTitle = "Next.js Sample Website";
+const name = 'Your Name';
+export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ home, children }: Props) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="Learn how to build a personal website using Next.js" />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(

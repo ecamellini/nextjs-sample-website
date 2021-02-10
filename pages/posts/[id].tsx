@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Layout from "../../components/layout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import { PostDataWContent } from "../../model/model";
-import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.scss";
+import Head from 'next/head';
+import Layout from '../../components/layout';
+import { getAllPostIds, getPostData } from '../../lib/posts';
+import { PostDataWContent } from '../../model/model';
+import Date from '../../components/date';
+import utilStyles from '../../styles/utils.module.scss';
 
 type Props = {
   postData: PostDataWContent;
 };
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id);
   return {
     props: {
